@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location | School</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
+    <script>
+        function initMap() {
+            var schoolLocation = { lat: 26.147333, lng:91.687144 }; 
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: schoolLocation
+            });
+            var marker = new google.maps.Marker({
+                position: schoolLocation,
+                map: map,
+                title: 'Our School'
+            });
+        }
+        window.onload = initMap;
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">School</a>
+            <div class="nav-container">
+                <ul class="navbar-nav nav-links">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="location.html">Location</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission.html">Admission Procedure</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="facilities.html">Facilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                </ul>
+            </div>
+            <button class="navbar-toggler nav-toggle" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+    <main class="container mt-4">
+        <!-- Hero Section -->
+        <section class="hero bg-secondary text-white text-center py-5">
+            <div class="container">
+                <h1 class="display-4">Find Us</h1>
+                <p class="lead">Discover our location and plan your visit.</p>
+            </div>
+        </section>
+
+        <!-- School Address Section -->
+        <section class="address my-5">
+            <div class="container">
+                <h2 class="mb-4">Our Address</h2>
+                <p><strong>St. Mary's Higher Secondary School</strong></p>
+                <p>M.C.Road</p>
+                <p>Chenikuthi</p>
+                <p>Guwahati -781003</p>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map my-5">
+            <div class="container">
+                <h2 class="mb-4">Map</h2>
+                <div id="map" class="map-container"></div>
+            </div>
+        </section>
+
+        <!-- Contact Information Section -->
+        <section class="contact-info bg-light py-5 text-center">
+            <div class="container">
+                <h2 class="mb-4">Contact Us</h2>
+                <p>For more information or assistance, please contact us:</p>
+                <p><strong>Phone:</strong> (123) 456-7890</p>
+                <p><strong>Email:</strong> info@school.com</p>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-light py-3">
+        <div class="container text-center">
+            <p>&copy; 2024 School. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
